@@ -1,0 +1,19 @@
+{
+  "name": "pwa-starter-vanilla",
+  "version": "0.0.1",
+  "description": "A starter kit for building PWAs with vanilla JavaScript!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "es-dev-server --app-index index.html --node-resolve --watch --open",
+    "dev": "es-dev-server --app-index index.html --node-resolve --watch --open"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@pwabuilder/pwainstall": "^1.4.2"
+  },
+  "devDependencies": {
+    "es-dev-server": "^1.45.2"
+  }
+}

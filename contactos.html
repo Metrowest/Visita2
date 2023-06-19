@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Metrowest | Visita</title>
+
+  <meta name="viewport"
+    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Metrowest Spanish app">
+  <meta name="theme-color" content="#686bd2">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Metrowest Visita">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Facebook metadata -->
+    <meta property="og:image:width" content="1146">
+    <meta property="og:image:height" content="600">
+    <meta property="og:title" content="Metrowest | Registros">
+    <meta property="og:description" content="Trabajando por la congregación">
+    <meta property="og:image"
+      content="https://github.com/Metrowest/Visita/blob/main/public/assets/icons3/og-image.jpg?raw=true/og-image.jpg">
+    <meta property="og:url" content="https://metrowest.github.io/Visita/">
+    
+    <!-- Imports an icon to represent the document. -->
+    <link rel="apple-touch-icon" sizes="180x180" href="public/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/assets/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="public/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="Metrowest | Visita">
+    <meta name="application-name" content="Metrowest | Visita">
+    <meta name="msapplication-config" content="public/assets/icons/browserconfig.xml" />
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="public/assets/icons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+  <link rel="icon" href="assets/icons/icon_24.png" type="image/x-icon">
+
+  <link rel="manifest" href="manifest.json">
+
+  <link href="src/global.css" rel="stylesheet">
+
+  <script type="module" src="src/script/pages/app-index.js"></script>
+
+  <!-- Top arow CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <!-- Top arow CDN Link -->
+
+  <!-- .stellarnav required -->
+  <link rel="stylesheet" type="text/css" media="all" href="src/appstyle.css">
+  <!-- .stellarnav required -->
+
+</head>
+
+<body>
+  <!-- .stellarnav header-->
+  <div class="header">
+    <a href="#">Metrowest Spanish</a>
+    <h2>Nombrados unidos por Jehová, trabajando por la congregación</h2>
+    <img title="logo" src="assets/icons/logolarge.webp" class="imgLogo" />
+    <h3>Cuando ya le pesaban las manos a Moisés... Aarón y Hur se colocaron uno a cada lado para
+      sostenerle las manos. (Éxodo 17:12)</h3>
+  </div>
+  <!-- .stellarnav header-->
+
+  <!--my body-->
+  <section class="container">
+    <h2 class="section-header" id="section-header">
+      <i><img title="header1" class="img4" src="assets/img/header1.webp"></i>CONTACTOS DE LA CONGREGACIÓN<i>
+        <img title="header2" class="img4" src="assets/img/header2.webp">
+      </i>
+    </h2>
+    <br>
+    <div class="containera">
+      <img title="cabeza1" src="assets/img/familia.webp" class="img8" /><br>
+      <button class="button1" id="g9"
+        onclick="window.open('https://drive.google.com/file/d/1buZDikzOEcuSng2p_ztQWldR_ssh3Je0/view?usp=sharing', '_blank');">
+        <img title="libros" class="img2" src="assets/img/contactos2.webp">Vea la Lista<br>de Contactos<br>
+      </button>
+      <h4>Busque el cabeza de la familia o la persona que necesita contactar
+        seleccionando la primera letra de su apellido.
+      </h4>
+    </div>
+    <div class="containerc">
+      <form name="google-sheet">
+        <div class="inputfielda">
+          <button type="button" id="buscar" class="button1" onclick="read_value($('#srchID').val())">
+            <img title="lupa" class="img2" src="assets/img/lupa.webp">
+            <i><span class="button__text">Buscar</span></i>
+          </button>
+          <select type="text" title="srchID" name="srchID" id="srchID" placeholder="Buscarpor apellido">
+            <option> Selección </option>
+            <option> A </option>
+            <option> B </option>
+            <option> C </option>
+            <option> D </option>
+            <option> E </option>
+            <option> F </option>
+            <option> G </option>
+            <option> H </option>
+            <option> I </option>
+            <option> J </option>
+            <option> K </option>
+            <option> L </option>
+            <option> M </option>
+            <option> N </option>
+            <option> O </option>
+            <option> P </option>
+            <option> Q </option>
+            <option> R </option>
+            <option> S </option>
+            <option> T </option>
+            <option> U </option>
+            <option> V </option>
+            <option> W </option>
+            <option> X </option>
+            <option> Y </option>
+            <option> Z </option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <div class="buttons-area">
+      <button class="button1" id="g9" onclick="window.location.href = 'registros.html';">
+        <img title="libros" class="img2" src="assets/img/Group-Metal-Folder-icon.png">Regresar a<br>los Registros
+      </button>
+    </div>
+    <div align="center">
+      <p id="re"></p>
+      <!-- Memanggil loader-->
+      <div id="showData"></div>
+      <div id="loader"></div>
+      <div id="showData">
+      </div>
+    </div>
+    <h3>Cuerpo de ancianos. Solo hemos hecho lo que teníamos que hacer <a
+        href="https://wol.jw.org/es/wol/bl/r4/lp-s?q=Luc.%2017%3A10" target="_blank">(Luc. 17:10)</a>.
+    </h3><br>
+    <!-- Top arow button on body -->
+    <div class="button">
+      <a href="#top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+    <a href='registros.html' class="btn-flotante">Regresar a<br>Registros</a>
+    <!-- Top arow button on body -->
+  </section>
+
+  <!--my scripts-->
+  <!-- Memanggil scripts-->
+  <script type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+
+  <!--contactos js-->
+  <script src="contactos.js"></script>
+  <!--contactos js-->
+
+</body>
+
+</html>

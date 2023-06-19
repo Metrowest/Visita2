@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Metrowest | Estudios</title>
+
+  <meta name="viewport"
+    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Metrowest Spanish app">
+  <meta name="theme-color" content="#686bd2">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Metrowest Visita">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <!-- Facebook metadata -->
+  <meta property="og:image:width" content="279">
+  <meta property="og:image:height" content="279">
+  <meta property="og:description" content="Estudios y revisitas programados.">
+  <meta property="og:title" content="Metrowest | Estudios">
+  <meta property="og:image"
+    content="https://github.com/Metrowest/Service/blob/main/public/assets/icons/og-image.jpg?raw=true/og-image.jpg">
+  <meta property="og:url" content="https://metrowest.github.io/Service/">
+
+  <!-- Imports an icon to represent the document. -->
+  <link rel="apple-touch-icon" sizes="180x180" href="public/assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="public/assets/icons/maskable_icon_x192.png">
+  <link rel="mask-icon" href="public/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="icon" type="image/svg+xml" href="public/assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" href="public/assets/icons/favicon.png">
+  <meta name="msapplication-config" content="public/assets/icons/browserconfig.xml" />
+  <meta name="msapplication-TileImage" content="public/assets/icons/mstile-144x144.png">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="icon" href="assets/icons/icon_24.png" type="image/x-icon">
+
+  <link rel="manifest" href="manifest.json">
+
+  <link href="src/global.css" rel="stylesheet">
+
+  <script type="module" src="src/script/pages/app-index.js"></script>
+
+  <!-- Top arow CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <!-- Top arow CDN Link -->
+
+  <!-- .stellarnav required -->
+  <link rel="stylesheet" type="text/css" media="all" href="src/appstyle.css">
+  <!-- .stellarnav required -->
+
+</head>
+
+<body>
+  <!-- .stellarnav header-->
+  <div class="header">
+    <h1>Metrowest Spanish</h1>
+    <h2>Estudios Y Revisitas</h2>
+    <img title="logolarge" src="assets/img/precursor4.webp" class="imgLogo2" />
+    <!--<h3> Y estemos pendientes unos de otros para motivarnos a mostrar amor y
+      a hacer buenas obras, sin dejar de reunirnos... (Hebreos 10:24, 25).<br>
+    </h3>-->
+  </div>
+  <!-- .stellarnav header-->
+
+  <!--my body-->
+  <section class="container">
+    <form method="post" autocomplete="off" name="google-sheet" action="" class="formulario">
+      <h2 class="section-header" id="section-header">
+        <i><img class="img4" alt="" src="assets/img/Mujer 2.webp"></i>ESTUDIOS Y REVISITAS PROGRAMADAS<i>
+          <img class="img4" alt="" src="assets/img/Mujer 1.webp">
+        </i>
+      </h2>
+      <img src="assets/img/precursor.webp" alt="" class="imgLogo" />
+
+      <div class="containera">
+        <h2>
+          Presione el botón para ver las visitas programadas<br>
+        </h2>
+      </div>
+
+      <!-- Tabla -->
+      <div class="content1">
+        <div class="buttons-area">
+          <div class="inputfield">
+            <input type="number" name="srchID" id="srchID" placeholder="Buscar por ID"
+              style=" display: none;padding: 3px;height: 40px;font-size: 20px;width: 100px;background-color:  #F5F5DC;color: #000;font-weight: bold;">
+          </div>
+
+          <button type="button" class="buttonast" onclick="read_value($('#srchID').val())">
+            <img class="img2" src="assets/img/lupa.webp"><i><span class="button__text">Vea las visitas
+                programadas</span></i>
+          </button>
+        </div>
+
+        <div id="showData"></div>
+
+        <div id="loader"></div>
+        <p id="re"></p>
+
+        <div class="louder-area">
+          <div></div>
+          <div id="loader"></div>
+          <p id="re"></p>
+        </div>
+      </div>
+      <!-- Tabla -->
+
+      <!-- Detalles -->
+      <!-- <div class="content2">
+        <div class="inputs">
+          <input type="date" name="Fecha" id="Fecha" format="dddd dd MMMM">
+          <label>Fecha</label>
+        </div>
+        <div class="inputs">
+          <input type="text" name="Acompañante" id="Acompañante" required>
+          <label>Acompañante</label>
+        </div>
+        <select input id="Reunion" name="Reunion" class="form-check-input" type="radius"
+          onchange="this.className=this.options[this.selectedIndex].className">
+          <option class="flechas" selected="true">---Reunión---</option>
+          <option class="flechasRoja" value="Entre semana">Entre semana</option>
+          <option class="flechasVerde" value="Fin de semana">Fin de semana</option>
+        </select>
+        <div class="inputs">
+          <input type="number" name="Asistencia" id="Asistencia">
+          <label>Asistencia</label>
+        </div>
+        <div class="inputs">
+          <input type="number" name="Zoom" id="Zoom">
+          <label>Zoom</label>
+        </div>
+      </div>
+
+      <div class="content1" id="respuesta"></div>
+      <div class="content1">
+        <button type="submit" id="submit" class="formulario__submit">Enviar</button>
+      </div><br>-->
+      <!-- Detalles -->
+      <div class="content1">
+        <h3>Gracias por aprovechar este medio digital de comunicación.</h3>
+      </div>
+      <div class="content1">
+        <h2 class="titulo">Cuerpo de Ancianos, Metrowest<br> <span class="typed"></span></h2>
+      </div>
+
+      <!-- Top arow button on body -->
+      <div class="button">
+        <a href="#top"><i class="fas fa-arrow-up"></i></a>
+      </div>
+      <!-- Top arow button on body -->
+    </form>
+  </section>
+
+  <!--my scripts-->
+  <!--WhatsApp-->
+  <script>
+    const scriptURL =
+      'https://script.google.com/macros/s/AKfycbyCn15CjCFEJtEoxFII8eAEvwCDBYuDNFDFXpOugLh78EUYDsGRUwnB7SH5a4GoUfJY/exec'
+    const form = document.forms['google-sheet']
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, {
+        method: 'POST',
+        body: new FormData(form)
+      })
+        .then(response => alert("Asistencia enviada exitosamente"))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  <!--WhatsApp-->
+
+
+  <script src="registro-asistencia.js"></script>
+
+  <!-- required stellarnav-->
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+      jQuery('.stellarnav').stellarNav({
+        theme: 'dark',
+        breakpoint: 960,
+        position: 'right',
+      });
+    });
+  </script>
+  <!-- required stellarnav-->
+
+</body>
+
+</html>
