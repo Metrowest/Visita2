@@ -16,7 +16,7 @@ var visualization;
 
 function drawVisualization() {
     var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1wokBXPC5QOjyzNStA3oBZB6zNKAD5aTQkF5WtCu_7Us&output=html&usp=sharing');
-    query.setQuery('SELECT * label A "Kingdom Hall Security Plan"');
+    query.setQuery('SELECT * label A, B, C "Kingdom Hall Security Plan"');
     query.send(handleQueryResponse);
 }
 
