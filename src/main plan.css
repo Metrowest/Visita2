@@ -107,6 +107,7 @@ a:hover {
 
 .google-visualization-table-table td {
     padding: 4px .35em !important;
+    min-width: 600px;
 }
 
 
