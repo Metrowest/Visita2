@@ -1,0 +1,138 @@
+/***************************
+    Site Design CSS
+***************************/
+
+#box {
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: auto;
+    width: auto;
+    padding: 2em;
+    color: #333;
+    text-align: center;
+    overflow: visible;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 3em;
+    line-height: 1.3em;
+    margin: 0.8rem 0 0 0;
+    padding-bottom: 5px;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.65em;
+    margin: 0.6em auto 0.6em auto;
+    padding: 0;
+    width: 23em;
+}
+
+p.small {
+    font-size: 0.8em;
+}
+
+a,
+a:visited,
+a:hover {
+    color: #dddddd;
+    font-weight: 600;
+}
+
+
+/***************************
+    Google Table CSS
+***************************/
+
+.google-visualization-table-tr-even,
+.google-visualization-table-tr-even td,
+.google-visualization-table-tr-even-nonstrict {
+    color: #333 !important;
+}
+
+.google-visualization-table-tr-odd,
+.google-visualization-table-tr-odd td,
+.google-visualization-table-tr-odd-nonstrict {
+    background-color: #c3c3c3 !important;
+    color: #333 !important;
+}
+
+.google-visualization-table-tr-sel,
+.google-visualization-table-tr-sel td,
+.google-visualization-table-tr-sel-nonstrict {
+    background-color: #333 !important;
+    color: #fff !important;
+}
+
+.google-visualization-table-tr-over,
+.google-visualization-table-tr-over td,
+.google-visualization-table-tr-over-nonstrict {
+    background-color: #333 !important;
+    color: #fff !important;
+}
+
+.google-visualization-table-td,
+.google-visualization-table-th {
+    border: 1px solid #333 !important;
+    color: #fff !important;
+}
+
+.google-visualization-table-tr-head,
+.google-visualization-table-tr-head td,
+.google-visualization-table-tr-head-nonstrict {
+    background-color: #5a5a5a !important;
+    background-image: none !important;
+    color: #333 !important;
+}
+
+.google-visualization-table .gradient {
+    background-image: none !important;
+}
+
+.google-visualization-table {
+    display: block !important;
+}
+
+.google-visualization-table-table {
+    margin: 0 auto !important;
+    border-collapse: collapse !important;
+    font-size: medium !important;
+}
+
+.google-visualization-table-table td {
+    padding: 4px .35em !important;
+}
+
+
+/***************************
+    Text Selection CSS
+***************************/
+
+::-moz-selection {
+    color: #fff;
+    background: #dddddd;
+}
+
+::selection {
+    color: #fff;
+    background: #dddddd;
+}
+
+#searchBar {
+    background-image: url('searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 300px; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
