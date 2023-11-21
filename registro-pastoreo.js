@@ -6,11 +6,11 @@ function insert_value() {
   $('#mySpinner').addClass('spinner');
 
 
-  var Fecha = $("#Fecha").val();
-  var Visita2 = $("#Visita2").val();
-  var Visita3 = $("#Visita3").val();//////////////////
+  var Dia1 = $("#Dia1").val();
+  var Dia2 = $("#Dia2").val();
+  var Dia3 = $("#Dia3").val();//////////////////
 
-  var url = script_url + "?callback=ctrlq&Fecha=" + Fecha + "&Visita2=" + Visita2 + "&Visita3=" + Visita3 + "&action=insert";
+  var url = script_url + "?callback=ctrlq&Dia1=" + Dia1 + "&Dia2=" + Dia2 + "&Dia3=" + Visita3 + "&action=insert";
 
   var request = jQuery.ajax({
     crossDomain: true,
@@ -26,11 +26,11 @@ function update_value() {
   document.getElementById("loader").style.visibility = "visible";
 
 
-  var Fecha = $("#Fecha").val();
-  var Visita2 = $("#Visita2").val();
-  var Visita3 = $("#Visita3").val();//////////////////
+  var Dia1 = $("#Dia1").val();
+  var Dia2 = $("#Dia2").val();
+  var Dia3 = $("#Dia3").val();//////////////////
 
-  var url = script_url + "?callback=ctrlq&Fecha=" + Fecha + "&Visita2=" + Visita2 + "&Visita3=" + Visita3 + "&action=insert";
+  var url = script_url + "?callback=ctrlq&Dia1=" + Dia1 + "&Dia2=" + Dia2 + "&Dia3=" + Dia3 + "&action=insert";
   var request = jQuery.ajax({
     crossDomain: true,
     url: url,
@@ -46,11 +46,11 @@ function delete_value() {
 
   $('#mySpinner').addClass('spinner');
 
-  var Fecha = $("#Fecha").val();
-  var Visita2 = $("#Visita2").val();
-  var Visita3 = $("#Visita3").val();//////////////////
+  var Dia1 = $("#Dia1").val();
+  var Dia2 = $("#Dia2").val();
+  var Dia3 = $("#Dia3").val();//////////////////
 
-  var url = script_url + "?callback=ctrlq&Fecha=" + Fecha + "&Visita2=" + Visita2 + "&Visita3=" + Visita3 + "&action=insert";
+  var url = script_url + "?callback=ctrlq&Dia1=" + Dia1 + "&Dia2=" + Dia2 + "&Dia3=" + Dia3 + "&action=insert";
 
   var request = jQuery.ajax({
     crossDomain: true,
@@ -88,9 +88,9 @@ function read_value(srch) {
     row.style.color = "rgb(255, 255, 255";
 
 
-    cell1.innerHTML = "<b>Visita 1</b>";
-    cell2.innerHTML = "<b>Visita 2</b>";
-    cell3.innerHTML = "<b>Visita 3</b>";//////////////////
+    cell1.innerHTML = "<b>Dia 1</b>";
+    cell2.innerHTML = "<b>Dia 2</b>";
+    cell3.innerHTML = "<b>Dia 3</b>";//////////////////
 
     //        alert(json.records);
     // masukkan data ke dalam tabel
@@ -100,11 +100,11 @@ function read_value(srch) {
         if (srch == json.records[i].ID) {
           tr = table.insertRow(-1);
           var tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Visita1;
+          tabCell.innerHTML = json.records[i].Dia1;
           tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Visita2;
+          tabCell.innerHTML = json.records[i].Dia2;
           tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = json.records[i].Visita3;////////////////
+          tabCell.innerHTML = json.records[i].Dia3;////////////////
         }
       }
       $("#re").html("Datos de la Persona");
@@ -115,11 +115,11 @@ function read_value(srch) {
         tr = table.insertRow(-1);
         var tabCell = tr.insertCell(-1);
 
-        tabCell.innerHTML = json.records[i].Visita1;
+        tabCell.innerHTML = json.records[i].Dia1;
         tabCell = tr.insertCell(-1);
-        tabCell.innerHTML = json.records[i].Visita2;
+        tabCell.innerHTML = json.records[i].Dia2;
         tabCell = tr.insertCell(-1);
-        tabCell.innerHTML = json.records[i].Visita3;////////////////
+        tabCell.innerHTML = json.records[i].Dia3;////////////////
       }
     }
 
@@ -130,9 +130,9 @@ function read_value(srch) {
     $("#re").css("visibility", "visible");
 
 
-    $("#Visita1").val("")
-    $("#Visita2").val("")
-    $("#Visita3").val("")
+    $("#Dia1").val("")
+    $("#Dia2").val("")
+    $("#Dia3").val("")
     getData2Input();///////////////////
   });
 }
@@ -153,11 +153,11 @@ function getData2Input() {
 
 function tableText(tableRow) {
 
-  var Visita1 = tableRow.childNodes[0].innerHTML;
+  var Dia1 = tableRow.childNodes[0].innerHTML;
   var Visita2 = tableRow.childNodes[1].innerHTML;
   var Visita3 = tableRow.childNodes[2].innerHTML;//////////
 
-  $("#Visita1").val(Visita1)
+  $("#Dia1").val(Dia1)
   $("#Visita2").val(Visita2)
   $("#Visita3").val(Visita3)
 }
