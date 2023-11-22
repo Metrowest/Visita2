@@ -20,7 +20,8 @@
   <meta property="og:title" content="Metrowest | Registros">
   <meta property="og:description" content="Trabajando por la congregación">
   <meta property="og:url" content="https://metrowest.github.io/Visita/index.html">
-  <meta property="og:image" content="https://github.com/Metrowest/Visita/raw/main/assets/img/pastoreo55.webp">
+  <meta property="og:image"
+    content="https://github.com/Metrowest/Visita/raw/main/assets/img/pastoreo55.webp">
 
   <!-- Imports an icon to represent the document. -->
   <link rel="apple-touch-icon" sizes="180x180" href="public/assets/icons/apple-touch-icon.png">
@@ -42,12 +43,6 @@
 
   <script type="module" src="src/script/pages/app-index.js"></script>
 
-  <!-- plan de seguridad css -->
-  <link href="src/normalize.css" rel="stylesheet">
-  <link href="src/main.css" rel="stylesheet">
-  <script src="https://www.google.com/jsapi" type="text/javascript"></script>
-  <!-- plan de seguridad css -->
-
   <!-- Top arow CDN Link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
   <!-- Top arow CDN Link -->
@@ -55,6 +50,12 @@
   <!-- .stellarnav required -->
   <link rel="stylesheet" type="text/css" media="all" href="src/appstyle.css">
   <!-- .stellarnav required -->
+
+  <!-- plan de seguridad css -->
+  <link href="src/normalize.css" rel="stylesheet">
+  <link href="src/main plan.css" rel="stylesheet">
+  <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+  <!-- plan de seguridad css -->
 
 </head>
 
@@ -70,26 +71,23 @@
 
   <!--my body-->
   <section class="container">
-
-    <h2 class="section-header" id="section-header">
-      <i><img title="header1" class="img4" src="assets/img/header1.webp"></i>CONTACTOS DE EMERGENCIA<i>
-        <img title="header2" class="img4" src="assets/img/header2.webp">
-      </i>
-    </h2>
     <div class="buttons-area">
       <button class="button1" id="g9" onclick="window.location.href = 'index.html';">
         <img title="libros" class="img2" src="assets/img/Group-Metal-Folder-icon.png">Regresar a<br>los Registros
       </button>
     </div>
+    <h2 class="section-header" id="section-header">
+      <i><img title="header1" class="img4" src="assets/img/header1.webp"></i>PASTOREO SEGUNDO DIA VISITA 2<i>
+        <img title="header2" class="img4" src="assets/img/header2.webp">
+      </i>
+    </h2>
+    
     <!--<h3>
       Kingdom Hall Security Plan
     </h3>-->
-    <div class="table-responsive" id="no-more-tables" style="height: 600px;">
+    <div class="table-responsive" id="no-more-tables">
       <table class="table bg-white">
-
         <div id="box">
-          <h3>Búsqueda por nombre o apellido</h3>
-          <input type="text" id="searchBar" onkeyup="search()" placeholder="Buscar contacto">
           <div id="table">
           </div>
         </div>
@@ -120,7 +118,7 @@
   </section>
 
   <!-- superintendente script -->
-  <script src="contactos2.js" type="text/javascript"></script>
+  <script src="pastoreo2B.js" type="text/javascript"></script>
   <!-- superintendente script -->
 
   <!--desastre-minimenu-->
@@ -139,27 +137,27 @@
   </script>
   <!--desastre-minimenu-->
 
-  <!--Buscar contacto-->
-  <script>
-    function search() {
-      var input, filter, table, tr, td, i;
-      input = document.getElementById("searchBar");
-      filter = input.value.toUpperCase();
-      table = document.getElementById("table");
-      tr = table.getElementsByTagName("tr");
-      for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[1];
-        if (td) {
-          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
-          } else {
-            tr[i].style.display = "none";
+    <!--Buscar plan-->
+    <script>
+      function search() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("searchBar");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("table");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[1];
+          if (td) {
+            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
           }
         }
       }
-    }
-  </script>
-  <!--Buscar contacto-->
+    </script>
+    <!--Buscar plan-->
 </body>
 
 </html>
