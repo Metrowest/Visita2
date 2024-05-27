@@ -16,7 +16,7 @@ var visualization;
 
 function drawVisualization() {
     var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1pmhBlczGtu44Pg8v7a5PToKJMJIJL52tlCRwNrMpp2s&usp=sharing');
-    query.setQuery('SELECT * label A "Segundo dia, visita 1"');
+    query.setQuery('SELECT * label A "Segundo dia"');
     query.send(handleQueryResponse);
 }
 

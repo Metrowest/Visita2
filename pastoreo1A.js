@@ -16,7 +16,7 @@ var visualization;
 
 function drawVisualization() {
     var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1fVk4VuhVck8uplzhQFSTmsdRrm3Duzt1p6V39TwSEYk&output=html&usp=sharing');
-    query.setQuery('SELECT * label A "Primer dia, visita 1"');
+    query.setQuery('SELECT * label A "Primer dia"');
     query.send(handleQueryResponse);
 }
 
@@ -32,4 +32,3 @@ function handleQueryResponse(response) {
     });
 }
 google.setOnLoadCallback(drawVisualization);
-
