@@ -2,84 +2,206 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Metrowest | Visita</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Metrowest Service</title>
 
-  <meta name="viewport"
-    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <meta name="description" content="Metrowest Spanish app">
-  <meta name="theme-color" content="#686bd2">
+  <!-- This meta viewport ensures the webpage's dimensions change according to the device it's on. This is called Responsive Web Design.-->
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0" />
+  <meta name="description" content="This is a Service app" />
 
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="Metrowest Visita">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#04416c" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#5a92b9" />
 
   <!-- Facebook metadata -->
-  <meta property="og:image:width" content="279">
-  <meta property="og:image:height" content="279">
-  <meta property="og:title" content="Metrowest | Registros">
-  <meta property="og:description" content="Trabajando por la congregación">
-  <meta property="og:url" content="https://metrowest.github.io/Visita/index.html">
+  <meta property="og:image:width" content="192">
+  <meta property="og:image:height" content="192">
+  <meta property="og:description"
+    content="Esta aplicaci&oacute;n le proveer&aacute; el plan de emergencias y algunas herramientas para el servicio.">
+  <meta property="og:title" content="Metrowest Service">
   <meta property="og:image"
-    content="https://github.com/Metrowest/Visita/raw/main/assets/img/pastoreo55.webp">
+    content="https://github.com/Metrowest/Service/blob/main/public/assets/icons2/android-chrome-192x192.png?raw=true/og-image.jpg">
+  <meta property="og:url" content="https://metrowest.github.io/Service/desastre.html">
+
+  <!-- Boxicons CDN Link Nav var pequwno-->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- These meta tags are Apple-specific, and set the web application to run in full-screen mode with a black status bar. Learn more at https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Guide" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
   <!-- Imports an icon to represent the document. -->
+  <link rel="apple-touch-icon" sizes="180x180" href="public/assets/icons/180.png">
   <link rel="apple-touch-icon" sizes="180x180" href="public/assets/icons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="public/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="public/assets/icons/favicon-16x16.png">
   <link rel="mask-icon" href="public/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="apple-mobile-web-app-title" content="Metrowest | Visita">
-  <meta name="application-name" content="Metrowest | Visita">
-  <meta name="msapplication-config" content="public/assets/icons/browserconfig.xml" />
   <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-TileImage" content="public/assets/icons/mstile-144x144.png">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#ee6306">
 
-  <link rel="icon" href="assets/icons/icon_24.png" type="image/x-icon">
 
-  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" sizes="180x180" href="public/assets/icons2/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="public/assets/icons2/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="public/assets/icons2/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="public/assets/icons2/safari-pinned-tab.svg">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ee6306">
 
-  <link href="src/global.css" rel="stylesheet">
+  <!-- Imports the manifest to represent the web application. A web app must have a manifest to be a PWA. -->
+  <link rel="manifest" href="public/manifest.json" />
 
-  <script type="module" src="src/script/pages/app-index.js"></script>
+  <!-- light mode and dark mode CSS -->
+  <link rel="stylesheet" media="(prefers-color-scheme:light)"
+    href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.73/dist/themes/light.css">
+  <link rel="stylesheet" media="(prefers-color-scheme:dark)"
+    href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.73/dist/themes/dark.css"
+    onload="document.documentElement.classList.add('sl-theme-dark');">
 
-  <!-- Top arow CDN Link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-  <!-- Top arow CDN Link -->
-
-  <!-- .stellarnav required -->
-  <link rel="stylesheet" type="text/css" media="all" href="src/appstyle.css">
-  <!-- .stellarnav required -->
+  <!-- required -->
+  <link rel="stylesheet" type="text/css" media="all" href="src/styles/stellarnav.css">
+  <link rel="stylesheet" type="text/css" media="all" href="src/styles/appstyle.css">
+  <!-- required -->
 
   <!-- superintendente css -->
   <script src="https://www.google.com/jsapi" type="text/javascript"></script>
   <!-- superintendente css -->
 
+
+  <!-- Top arow CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <!-- Top arow CDN Link -->
+
 </head>
 
 <body>
+  <!-- Our app-index web component. This component is defined in src/pages/app-index.ts-->
+  <app-index></app-index>
+
+  <!-- .stellarnav -->
+  <div class="stellarnav">
+    <ul>
+      <li><a href="index.html"><i><img title="casa1" class="img6" src="public/assets/img/casa1.webp"></i>Home</a>
+      </li>
+
+      <li>
+        <a href="desastre.html">
+          <i><img title="explorer" class="img6" src="public/assets/img/tormenta1.webp"></i>
+          Plan Ante Un<br>Desastre Natural
+        </a>
+      </li>
+      <li><a><i><img title="predicacion" class="img6 js-arrow" src="public/assets/img/precursor4.webp"></i>Predicación<i
+            class="fa fa-angle-down"></i></a>
+        <ul>
+          <li>
+            <a href="territorios.html">
+              <i><img title="explorer" class="img6" src="public/assets/img/territorio1.webp"></i>
+              Territorios
+            </a>
+          </li>
+          <li>
+            <a href="interes.html">
+              <i><img title="android" class="img6" src="public/assets/img/precursor1.webp"></i>
+              Interesados
+            </a>
+          </li>
+          <li>
+            <a href="precursorado.html">
+              <i><img title="apple" class="img6" src="public/assets/img/precursor4.webp"></i>
+              Precursorado
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!--<li><a><i><img title="eventos" class="img6 js-arrow" src="public/assets/img/familia4.webp"></i>Eventos<i
+            class="fa fa-angle-down"></i></a>
+        <ul>
+          <li><a href="conmemoracion.html"><i><img title="casa1" class="img6"
+                  src="public/assets/img/bg.webp"></i>Conmemoración</a>
+          </li>
+          <li>
+            <a href="circuito1.html">
+              <i><img title="android" class="img6" src="public/assets/img/asamblea1.webp"></i>
+              Asamblea de circuito<br> 16 de Septiembre 2023
+            </a>
+          </li>
+          <li>
+            <a href="circuito2.html">
+              <i><img title="apple" class="img6" src="public/assets/img/asamblea1.webp"></i>
+              Asamblea de circuito<br> 14 de Enero 2024
+            </a>
+          </li>
+          <li>
+            <a href="regional.html">
+              <i><img title="apple" class="img6" src="public/assets/img/asamblea3.webp"></i>
+              Asamblea Regional<br> 28 - 30 de julio de 2023
+            </a>
+          </li>
+          <li>
+            <a href="campana.html">
+              <i><img title="apple" class="img6" src="public/assets/img/precursor4.webp"></i>
+              Campaña <br> Mundial
+            </a>
+          </li>
+        </ul>
+      </li>-->
+      <li><a><i><img title="recursos" class="img6 js-arrow" src="public/assets/img/recurso.webp"></i>Recursos<i
+            class="fa fa-angle-down"></i></a>
+        <ul>
+          <li>
+            <a href="recursos.html">
+              <i><img title="explorer" class="img6" src="public/assets/img/explorer.webp"></i>
+              Instalación En Windows
+            </a>
+          </li>
+          <li>
+            <a href="recursos.html#android">
+              <i><img title="android" class="img6" src="public/assets/img/android.webp"></i>
+              Instalación En Androide
+            </a>
+          </li>
+          <li>
+            <a href="recursos.html#iphone">
+              <i><img title="apple" class="img6" src="public/assets/img/apple.webp"></i>
+              Instalación En iPhone
+            </a>
+          </li>
+          <li>
+            <a href="recursos.html#territorios">
+              <i><img title="territorio2" class="img6" src="public/assets/img/territorio2.webp"></i>
+              Accede A Los Territorios
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="iniciar.html"><i><img title="visita" class="img6"
+              src="public/assets/img/a&m.webp"></i>Nombrados<br>Iniciar
+          Sección</a>
+      </li>
+    </ul>
+  </div>
+  <!-- .stellarnav -->
+
   <!-- .stellarnav header-->
   <div class="header">
-    <a href="#">Metrowest Spanish</a>
-    <h2>Nombrados unidos por Jehová, trabajando por la congregación</h2>
-    <img title="logo" src="assets/icons/logolarge.webp" class="imgLogo" />
-    <h3>Cuerpo de ancianos. Solo hemos hecho lo que teníamos que hacer (Luc. 17:10).</h3>
+    <a href="#">Metrowest Service</a>
+    <h1>Trabajando Unidos Como Congregación</h1>
+    <img title="logolarge" src="public/assets/img/tormenta1.webp" class="img8" />
+    <h3> “El recordatorio de Jehová es fidedigno, hace sabio al inexperto.” (SALMO 19:7).<br>
+    </h3>
   </div>
   <!-- .stellarnav header-->
 
   <!--my body-->
   <section class="container">
-    <div class="buttons-area">
-      <button class="button1" id="g9" onclick="window.location.href = 'index.html';">
-        <img title="libros" class="img2" src="assets/img/Group-Metal-Folder-icon.png">Regresar a<br>los Registros
-      </button>
-    </div>
     <h2 class="section-header" id="section-header">
-      <i><img title="header1" class="img4" src="assets/img/header1.webp"></i>PLAN ANTE UNA EMERGENCIA
+      <i><img title="header1" class="img4" src="public/assets/img/header1.webp"></i>PLAN ANTE UNA EMERGENCIA
       NATURAL<i>
-        <img title="header2" class="img4" src="assets/img/header2.webp">
+        <img title="header2" class="img4" src="public/assets/img/header2.webp">
       </i>
     </h2>
+    <P1 id="Responsabilidades"></P1>
+
     <FORM class="projects" ACTION="../cgi-bin/redirect.pl" METHOD=POST onSubmit="return dropdown(this.gourl)">
       <select aria-label="gourl" NAME="gourl">
         <OPTION VALUE="">Selecciona un subtema</OPTION>
@@ -94,32 +216,24 @@
       </SELECT>
       <INPUT TYPE=SUBMIT VALUE="Buscar" />
     </FORM>
-
     <div class="containera">
-      <P1 id="Responsabilidades"></P1>
-      <img title="tormenta1" src="assets/img/tormenta1.webp" class="img8" />
-
-      <h4>“El recordatorio de Jehová es fidedigno, hace sabio al inexperto.” <a
-          href="https://wol.jw.org/es/wol/l/r4/lp-s?q=SALMO+19%3A7" target="_blank">(SALMO 19:7) </a>.
-      </h4>
-    </div>
-
+      <img title="tormenta2" src="public/assets/img/tormenta2.webp" class="img8" />
+    </div><br>
+    <h4>“Por eso, ya sea que estén comiendo, bebiendo o haciendo cualquier otra cosa, háganlo todo para la gloria de
+      Dios.” <a href="https://wol.jw.org/es/wol/l/r4/lp-s?q=1+Corintios+10%3A31" target="_blank">(1 Corintios
+        10:31)</a>. La frase “cualquier otra cosa” definitivamente se puede aplicar a la respuesta ante un
+      desastre.
+    </h4><br>
     <h2 class="section-header" id="section-header">
-      <i><img title="header1" class="img4" src="assets/img/header1.webp"></i>Responsabilidades de los
+      <i><img title="header1" class="img4" src="public/assets/img/header1.webp"></i>Responsabilidades de los
       encargados y Auxiliares de grupo<i>
-        <img title="header2" class="img4" src="assets/img/header2.webp">
+        <img title="header2" class="img4" src="public/assets/img/header2.webp">
       </i>
     </h2>
-    <div class="containera">
-      <img title="tormenta2" src="assets/img/tormenta2.webp" class="img8" />
-    </div><br>
-    <h4>“Por eso, ya sea que estén comiendo, bebiendo o haciendo cualquier otra cosa,
-      háganlo todo para la gloria de Dios.” <a href="https://wol.jw.org/es/wol/l/r4/lp-s?q=1+Corintios+10%3A31"
-        target="_blank">(1 Corintios 10:31)</a>. La frase “cualquier otra cosa” definitivamente se puede
-      aplicar a la respuesta ante un desastre.
-    </h4>
+
+
     <div class="containerc">
-      <img title="encargado" src="assets/img/a&m.webp" class="img8" />
+      <img title="encargado" src="public/assets/img/a&m.webp" class="img8" />
       <h4>
         Ancianos y siervos ministeriales:
       </h4> <br><br>
@@ -158,7 +272,7 @@
 
     </div>
     <div class="containerb">
-      <img title="cuerpo2" src="assets/img/cuerpo2.webp" class="img8" />
+      <img title="cuerpo2" src="public/assets/img/cuerpo2.webp" class="img8" />
       <p2>
         Los superintendentes, los ministeriales, el coordinador, el superintendente de circuito y la
         sucursal son eslabones esenciales para velar por la seguridad y el bienestar de la congregación.
@@ -186,9 +300,9 @@
     </div>
 
     <h2 class="section-header" id="section-header">
-      <i><img title="header1" class="img4" src="assets/img/header1.webp"></i>Plan para la temporada de
+      <i><img title="header1" class="img4" src="public/assets/img/header1.webp"></i>Plan para la temporada de
       huracanes<i>
-        <img title="header2" class="img4" src="assets/img/header2.webp">
+        <img title="header2" class="img4" src="public/assets/img/header2.webp">
       </i>
     </h2>
 
@@ -218,6 +332,65 @@
 
       </table>
     </div>
+    <h3>
+      Superintendentes de Grupo
+    </h3>
+    <div class="table-responsive" id="no-more-tables">
+
+      <table class="table bg-white">
+
+        <thead class="bg-dark text-light">
+          <tr>
+            <th>Grupo</th>
+            <th>Nombre</th>
+            <th>Teléfono</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td data-title="Grupo">#1</td>
+            <td data-title="Nombre">Lázaro Cabrera</td>
+            <td data-title="Teléfono">(407) 608-2400</td>
+          </tr>
+          <tr>
+            <td data-title="Grupo">#2</td>
+            <td data-title="Nombre">Carlos Fajardo</td>
+            <td data-title="Teléfono">(407) 579-8252</td>
+          </tr>
+          <tr>
+            <td data-title="Grupo">#3</td>
+            <td data-title="Nombre">Walter Figueroa</td>
+            <td data-title="Teléfono">(407) 617-3880</td>
+          </tr>
+          <tr>
+            <td data-title="Grupo">#4</td>
+            <td data-title="Nombre">Juan Moa</td>
+            <td data-title="Teléfono">(407) 493-8534</td>
+          </tr>
+          <tr>
+            <td data-title="Grupo">#5</td>
+            <td data-title="Nombre">David Hernández</td>
+            <td data-title="Teléfono">(407) 501-9418</td>
+          </tr>
+          <tr>
+            <td data-title="Grupo">#6</td>
+            <td data-title="Nombre">Jorge Carlo</td>
+            <td data-title="Teléfono">(407) 617-8351</td>
+          </tr>
+          <tr>
+            <td data-title="Grupo">#7</td>
+            <td data-title="Nombre">Harold Morales</td>
+            <td data-title="Teléfono">(787) 949-1964</td>
+          </tr>
+          <tr>
+            <td data-title="Grupo">#8</td>
+            <td data-title="Nombre">David Victoria</td>
+            <td data-title="Teléfono">(732) 857-1138</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <div class="containerb">
       <p>
@@ -225,7 +398,7 @@
       </p>
     </div>
     <div class="containerb">
-      <img title="cuerpo1" src="assets/img/encargado1.webp" class="img8" />
+      <img title="cuerpo1" src="public/assets/img/encargado1.webp" class="img8" />
       <p>
         Superintendentes de los grupos para el servicio del campo y sus auxiliares:
       </p>
@@ -266,7 +439,7 @@
       </p>
     </div>
     <div class="content1">
-      <img title="cabeza2" src="assets/img/cabeza2.webp" class="imgLogo2" />
+      <img title="cabeza2" src="public/assets/img/cabeza2.webp" class="imgLogo2" />
     </div>
     <div class="content1">
       <p>4. Reúnase, en compañía de su auxiliar, con cada cabeza de familia de aquellas
@@ -286,11 +459,12 @@
       </p>
       <p>
         • Si no tienen planes, ¿estarían dispuestos a reubicarse temporalmente al hogar de otro
-        publicador (o a un Salón del Reino si fuera necesario)?
+        publicador (o a
+        un Salón del Reino si fuera necesario)?
       </p>
     </div>
     <div class="containerc">
-      <img title="cabeza1" src="assets/img/cabeza1.webp" class="img8" />
+      <img title="cabeza1" src="public/assets/img/cabeza1.webp" class="img8" />
       <p> 5. Determine qué publicadores tienen casas “seguras”, y están dispuestos a proveer
         alojamiento temporal a quienes lo necesiten. Para decidir cuáles casas serían apropiadas, emplee las
         siguientes
@@ -308,10 +482,10 @@
     </div>
 
     <h2 class="section-header" id="section-header">
-      <i><img title="header1" class="img4" src="assets/img/header1.webp"></i>Vigilancia de Huracán
+      <i><img title="header1" class="img4" src="public/assets/img/header1.webp"></i>Vigilancia de Huracán
       (“HURRICANE
       WATCH”)<i>
-        <img title="header2" class="img4" src="assets/img/header2.webp">
+        <img title="header2" class="img4" src="public/assets/img/header2.webp">
       </i>
     </h2>
 
@@ -330,11 +504,11 @@
       <INPUT TYPE=SUBMIT VALUE="Buscar" />
     </FORM>
     <div class="containt1">
-      <h4><i><img title="vigilancia" class="imgLogo2" src="assets/img/vigilancia.webp"></i>
+      <h4><i><img title="vigilancia" class="imgLogo2" src="public/assets/img/vigilancia.webp"></i>
       </h4>
     </div>
     <div class="containerb">
-      <img title="cuerpo1" src="assets/img/cuerpo2.webp" class="img8" />
+      <img title="cuerpo1" src="public/assets/img/cuerpo2.webp" class="img8" />
       <p> El Cuerpo de ancianos se reúne para repasar la información del Plan arriba
         mencionado,
         que cada
@@ -352,7 +526,7 @@
 
 
     <div class="containera">
-      <img title="LDC" src="assets/img/LDC.webp" class="img8" />
+      <img title="LDC" src="public/assets/img/LDC.webp" class="img8" />
 
       <p> Si el Departamento Local de Diseño y Construcción (LDC) confirma que la estructura del
         Salón
@@ -371,10 +545,10 @@
       </p><br><br>
     </div>
     <h2 class="section-header" id="section-header">
-      <i><img title="header1" class="img4" src="assets/img/header1.webp"></i>Aviso de Huracán
+      <i><img title="header1" class="img4" src="public/assets/img/header1.webp"></i>Aviso de Huracán
       (“HURRICANE
       WARNING”)<i>
-        <img title="header2" class="img4" src="assets/img/header2.webp">
+        <img title="header2" class="img4" src="public/assets/img/header2.webp">
       </i>
     </h2>
 
@@ -393,7 +567,7 @@
       <INPUT TYPE=SUBMIT VALUE="Buscar" />
     </FORM>
     <div class="content1">
-      <i><img title="aviso" class="imgLogo2" src="assets/img/aviso.webp"></i>
+      <i><img title="aviso" class="imgLogo2" src="public/assets/img/aviso.webp"></i>
     </div>
     <div class="content1">
       <p>
@@ -409,7 +583,7 @@
       </p>
     </div>
     <div class="containerc">
-      <i><img title="banderas" class="img8" src="assets/img/banderas.webp"></i>
+      <i><img title="banderas" class="img8" src="public/assets/img/banderas.webp"></i>
       <p>
         3. El Coordinador, Juan Moa, se comunicará con el “Operating Committee” (Comité de
         Operaciones)
@@ -418,7 +592,7 @@
     </div>
 
     <div class="containerb">
-      <img title="cabeza2" src="assets/img/cabeza2.webp" class="img8" />
+      <img title="cabeza2" src="public/assets/img/cabeza2.webp" class="img8" />
       <p>4. Dentro de las primeras 12 horas después de haber dado la alarma de “HURRICANE
         WARNING” el
         superintendente y su auxiliar se comunicará con cada familia de su grupo.
@@ -447,9 +621,11 @@
 
 
     <h2 class="section-header" id="section-header">
-      <i><img title="header1" class="img4" src="assets/img/header1.webp"></i>Inmediatamente
-      después de haber pasado el huracán<i>
-        <img title="header2" class="img4" src="assets/img/header2.webp">
+      <i><img title="header1" class="img4" src="public/assets/img/header1.webp"></i>Inmediatamente
+      después de haber
+      pasado el
+      huracán<i>
+        <img title="header2" class="img4" src="public/assets/img/header2.webp">
       </i>
     </h2>
 
@@ -469,7 +645,7 @@
     </FORM>
 
     <div class="containerb">
-      <img title="cabeza1" src="assets/img/cabeza1.webp" class="img8" />
+      <img title="cabeza1" src="public/assets/img/cabeza1.webp" class="img8" />
       <p>1. Cada encargado de Grupo = se reportará inmediatamente con el coordinador para
         notificarle de su situación personal, si se necesita alguna ayuda y del resultado
         de sus esfuerzos en comunicarse con los publicadores de su grupo.
@@ -477,7 +653,7 @@
     </div>
 
     <div class="containerc">
-      <img title="telefono" src="assets/img/telefono.webp" class="img8" />
+      <img title="telefono" src="public/assets/img/telefono.webp" class="img8" />
       <p>2. De inmediato póngase en contacto con todos los publicadores para determinar sus
         necesidades inmediatas y
         las condiciones en que se encuentran. Empiece a brindar ayuda en conformidad (si
@@ -487,7 +663,7 @@
       </p>
     </div>
     <div class="containerb">
-      <img title="casa2" class="img8" src="assets/img/casa2.webp">
+      <img title="casa2" class="img8" src="public/assets/img/casa2.webp">
       <p>Junto a su auxiliar determine si se necesita ayuda. Reportara la información
         pertinente
         a:<br>
@@ -505,14 +681,14 @@
     </div>
 
     <div class="containerc">
-      <img title="coordinador" class="img8" src="assets/img/coordinador.webp">
+      <img title="coordinador" class="img8" src="public/assets/img/coordinador.webp">
       <p>3. El Coordinador verificara la condición del Salón del Reino y se lo reportara al
         Superintendente de Circuito o al Superintendente de Asamblea.
       </p>
     </div>
 
     <div class="containerb">
-      <img title="cuerpo1" class="img8" src="assets/img/cuerpo1.webp">
+      <img title="cuerpo1" class="img8" src="public/assets/img/cuerpo1.webp">
       <p>
         4. Dentro de las primeras 12 horas y de manera diligente, además de reportar la
         información
@@ -531,7 +707,7 @@
       </p>
     </div>
     <div class="content1">
-      <img title="pastoreo1h" class="imgLogo2" src="assets/img/pastoreo1h.webp">
+      <img title="pastoreo1h" class="imgLogo2" src="public/assets/img/pastoreo1h.webp">
 
       <p>
         D. ¿Se han hecho planes para hacer visitas de pastoreo a los hermanos más afectados?<br>
@@ -542,7 +718,7 @@
       </p>
     </div>
     <div class="containera">
-      <img title="telefono" src="assets/img/telefono.webp" class="img8" />
+      <img title="telefono" src="public/assets/img/telefono.webp" class="img8" />
       <p> 5. Dentro de las primeras 24 horas, el Coordinador se comunicará con el Superintendente
         de
         Circuito o el Superintendente de Asamblea y proveerá un reporte de la congregación.
@@ -558,7 +734,7 @@
     </div>
 
     <div class="containerb">
-      <img title="familia1" class="img8" src="assets/img/familia.webp">
+      <img title="familia1" class="img8" src="public/assets/img/familia.webp">
       <p>
         6. Información sobre el procedimiento:
       </p>
@@ -587,7 +763,7 @@
       </p>
     </div>
     <div class="containera">
-      <img title="LDC" class="img8" src="assets/img/LDC.webp">
+      <img title="LDC" class="img8" src="public/assets/img/LDC.webp">
       <p>
          También será preciso dar atención a evaluar los daños de los hogares y pertenencias de
         los
@@ -653,9 +829,9 @@
     </div>
     <div class="content1">
       <h2 class="section-header" id="section-header">
-        <i><img title="header1" class="img4" src="assets/img/header1.webp"></i>Pasos a seguir
+        <i><img title="header1" class="img4" src="public/assets/img/header1.webp"></i>Pasos a seguir
         cuando azota un huracán<i>
-          <img title="header1" class="img4" src="assets/img/header2.webp">
+          <img title="header1" class="img4" src="public/assets/img/header2.webp">
         </i>
       </h2>
     </div>
@@ -674,13 +850,13 @@
       <INPUT TYPE=SUBMIT VALUE="Buscar" />
     </FORM>
     <div class="containera">
-      <i><img title="cabeza2" class="img8" src="assets/img/cabeza2.webp"></i>
+      <i><img title="cabeza2" class="img8" src="public/assets/img/cabeza2.webp"></i>
       <p>
         1. Los ancianos de la congregación se ponen en contacto con todos los publicadores
       </p>
     </div>
     <div class="containerc">
-      <i><img title="telefono" class="imgLogo2" src="assets/img/telefono.webp"></i>
+      <i><img title="telefono" class="imgLogo2" src="public/assets/img/telefono.webp"></i>
       <p>
         2. Los ancianos informan al coordinador del cuerpo de ancianos.<br><br>
         3. Los coordinadores informan a los superintendentes viajantes y a otros hermanos
@@ -691,7 +867,7 @@
       </p>
     </div>
     <div class="containerb">
-      <i><img title="pastoreo1v" class="imgLogo2" src="assets/img/pastoreo1v.webp"></i>
+      <i><img title="pastoreo1v" class="imgLogo2" src="public/assets/img/pastoreo1v.webp"></i>
       <p>
         4. Se suministran alimentos, agua, refugio, atención médica y apoyo emocional y
         espiritual
@@ -701,7 +877,7 @@
       </p>
     </div>
     <div class="containerc">
-      <i><img title="ayuda" class="imgLogo2" src="assets/img/ayuda.webp"></i>
+      <i><img title="ayuda" class="imgLogo2" src="public/assets/img/ayuda.webp"></i>
       <p>
         5. La sucursal envía rápidamente al Comité de Coordinadores del Cuerpo Gobernante un
         informe
@@ -711,7 +887,7 @@
       </p>
     </div>
     <div class="containerb">
-      <i><img title="cuerpo4" class="imgLogo2" src="assets/img/cuerpo4.webp"></i>
+      <i><img title="cuerpo4" class="imgLogo2" src="public/assets/img/cuerpo4.webp"></i>
       <p>
         6. El Comité de Socorro organiza las labores humanitarias y ayuda a los hermanos en su
         recuperación
@@ -721,7 +897,7 @@
     </div>
 
     <div class="containerc">
-      <i><img title="avion" class="imgLogo2" src="assets/img/avion.webp"></i>
+      <i><img title="avion" class="imgLogo2" src="public/assets/img/avion.webp"></i>
       <p>
 
         7. El Comité de Coordinadores evalúa las necesidades y, si hace falta, aprueba la
@@ -732,9 +908,9 @@
 
     <div class="content1">
       <h2 class="section-header" id="section-header">
-        <i><img title="header1" class="img4" src="assets/img/header1.webp"></i>Textos bíblicos
+        <i><img title="header1" class="img4" src="public/assets/img/header1.webp"></i>Textos bíblicos
         para consolar a las víctimas<i>
-          <img title="header2" class="img4" src="assets/img/header2.webp">
+          <img title="header2" class="img4" src="public/assets/img/header2.webp">
         </i>
       </h2>
     </div>
@@ -753,7 +929,7 @@
       <INPUT TYPE=SUBMIT VALUE="Buscar" />
     </FORM>
     <div class="content1">
-      <i><img title="biblia" class="img4" src="assets/img/biblia.webp"></i>
+      <i><img title="biblia" class="img4" src="public/assets/img/biblia.webp"></i>
       <p>
         1. Génesis 18:25: “Es inconcebible de ti el que vayas a obrar de esta manera para dar
         muerte
@@ -766,7 +942,7 @@
       </p>
     </div>
     <div class="content1">
-      <i><img title="biblia" class="img4" src="assets/img/biblia.webp"></i>
+      <i><img title="biblia" class="img4" src="public/assets/img/biblia.webp"></i>
       <p>
         2. Salmo 46:1, 2: “Dios es para nosotros refugio y fuerza, una ayuda que puede hallarse
         prontamente
@@ -777,7 +953,7 @@
       </p>
     </div>
     <div class="content1">
-      <i><img title="biblia" class="img4" src="assets/img/biblia.webp"></i>
+      <i><img title="biblia" class="img4" src="public/assets/img/biblia.webp"></i>
       <p>
         3. Isaías 63:9: “Durante el tiempo de toda la angustia de ellos le fue angustioso a él”.
       </p>
@@ -786,7 +962,7 @@
       </p>
     </div>
     <div class="content1">
-      <i><img title="biblia" class="img4" src="assets/img/biblia.webp"></i>
+      <i><img title="biblia" class="img4" src="public/assets/img/biblia.webp"></i>
       <p>
         4. Juan 5:28, 29: “Viene la hora en que todos los que están en las tumbas conmemorativas
         oirán
@@ -802,7 +978,7 @@
       </p>
     </div>
     <div class="content1">
-      <i><img title="biblia" class="img4" src="assets/img/biblia.webp"></i>
+      <i><img title="biblia" class="img4" src="public/assets/img/biblia.webp"></i>
       <p>
         5. 1 Pedro 5:6, 7: “Humíllense, por lo tanto, bajo la poderosa mano de Dios [...]; a la
         vez
@@ -817,7 +993,7 @@
       </p>
     </div>
     <div class="content1">
-      <i><img title="biblia" class="img4" src="assets/img/biblia.webp"></i>
+      <i><img title="biblia" class="img4" src="public/assets/img/biblia.webp"></i>
       <p>
         6. Revelación 21:4: “Limpiará toda lágrima de sus ojos, y la muerte no será más, ni
         existirá
@@ -833,9 +1009,9 @@
     </div>
     <div class="content1">
       <h2 class="section-header" id="section-header">
-        <i><img title="header1" class="img4" src="assets/img/header1.webp"></i>Preparación y
+        <i><img title="header1" class="img4" src="public/assets/img/header1.webp"></i>Preparación y
         suministstros<i>
-          <img title="header2" class="img4" src="assets/img/header2.webp">
+          <img title="header2" class="img4" src="public/assets/img/header2.webp">
         </i>
       </h2>
     </div>
@@ -854,7 +1030,7 @@
       <INPUT TYPE=SUBMIT VALUE="Buscar" />
     </FORM>
     <div class="containera">
-      <i><img title="articulos" class="imgLogo2" src="assets/img/articulos.webp"></i>
+      <i><img title="articulos" class="imgLogo2" src="public/assets/img/articulos.webp"></i>
       <h3>
         ¿Tiene todo lo necesario?
       </h3>
@@ -873,7 +1049,7 @@
       </p>
     </div>
     <div class="containera">
-      <a href="articulos.html"><i><img title="backpack" class="img8" src="assets/img/backpack.webp"></i></a>
+      <a href="articulos.html"><i><img title="backpack" class="img8" src="public/assets/img/backpack.webp"></i></a>
       <p>
         Además, algunas familias han preparado mochilas de emergencia con artículos como los
         siguientes:
@@ -917,7 +1093,7 @@
         <a href="articulos.html" target="_blank"> presione la mochila</a>, encontrara
         algunos de estos articulos localmente o en internet.<br><br>
       </p>
-      <a href="articulos.html"><i><img title="backpack" class="img8" src="assets/img/backpack.webp"></i></a>
+      <a href="articulos.html"><i><img title="backpack" class="img8" src="public/assets/img/backpack.webp"></i></a>
     </div><br>
 
 
@@ -929,25 +1105,40 @@
       </h4>
     </div>
     <div class="containera">
-      <img title="logo" src="assets/icons/logolarge.webp" class="imgLogo" />
+      <img title="logo" src="public/assets/icons/logolarge.webp" class="imgLogo" />
       <h3>Cuerpo de ancianos. Solo hemos hecho lo que teníamos que hacer <a
           href="https://wol.jw.org/es/wol/bl/r4/lp-s?q=Luc.%2017%3A10" target="_blank">(Luc. 17:10)</a>.</h3>
     </div>
-
     <!-- Top arow button on body -->
     <div class="button">
       <a href="#top" title="top "><i class="fas fa-arrow-up"></i></a>
     </div>
-    <a href='index.html' class="btn-flotante">Regresar a<br>Registros</a>
     <!-- Top arow button on body -->
-
   </section>
 
-  <!-- superintendente script -->
-  <script src="superintendentes.js" type="text/javascript"></script>
-  <!-- superintendente script -->
+  <!--desastre-->
+  <script src="public/minimenu.js"></script>
 
-  <!--desastre-minimenu-->
+  <!-- required stellarnav-->
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script type="text/javascript" src="public/stellarnav.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+      jQuery('.stellarnav').stellarNav({
+        theme: 'dark',
+        breakpoint: 960,
+        position: 'right',
+      });
+    });
+  </script>
+  <!-- required stellarnav-->
+
+    <!-- superintendente script -->
+    <script src="superintendentes.js" type="text/javascript"></script>
+    <!-- superintendente script -->
+
+  <script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script>
+
   <script TYPE="text/javascript">
     function dropdown(mySel) {
       var myWin, myVal;
@@ -961,7 +1152,6 @@
       return false;
     }
   </script>
-  <!--desastre-minimenu-->
 
 </body>
 
