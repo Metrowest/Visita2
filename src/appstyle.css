@@ -581,6 +581,7 @@ input[type="SUBMIT"] {
 }
 
 #no-more-tables {
+    max-height: 400px;
     max-width: 100%;
     min-width: 200px;
     overflow-x: auto;
